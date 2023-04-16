@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}{{posts.name}}{% endblock title %}
+
+
+  
+
+{% block context %}
+<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+<div class="card mb-3">
+    <img src="{{posts.image.url}}" class="card-img-top" alt="...">
+   
+</div></div>
+
+
+<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+  <div class="card mb-3" style="max-width: 100%px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{posts.image.url}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title" style='color:black;text-align:right;'><span style='color:red;'>نام غذا:</span>{{posts.name}}</h5>
+          <p class="card-text" style='color:black;text-align:right;'><span style='color:red;'>توضیحات:</span>{{posts.text}}</p>
+          
+          <p class="card-text" style='color:black;text-align:right;'><span style='color:red;'>قیمت:</span>{{posts.price}}تومان</p>
+          <p class="card-text"><small class="text-muted">Last updated {{posts.created}}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>  </div>
+{% endblock context %}
+
+
+
